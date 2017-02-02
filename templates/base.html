@@ -2,10 +2,28 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% block title %}My webapp{% endblock %}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-	{% block content %}{% endblock %}
+	<noscript>
+		<h1>Ooops! It looks like you've turned off JavaScript. Please turn on JavaScript in order to use this site properly</h1>
+	</noscript>
+	<!--[if IE]><h1>Dear Internet Explorer user. This website will not work as intended using IE. Please consider upgrading your web-browser to something better. </h1><![endif]-->
+	<header>
+		<nav class="nav">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/loot_statistics/">Loot Statistics</a></li>
+				<li><a href="/boss_statistics/">Boss Statistics</a></li>
+				<li><a href="/online_check/">Online Check</a></li>
+				<li><a href="/about/">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>{% block content %}{% endblock %}</main>
+	<footer></footer>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
 </html>
