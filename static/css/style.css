@@ -1,8 +1,23 @@
 body{
 	background: #EEE;
 	font-family: "Arial";
+	margin: 0;
+	padding: 0;
 }
 
+/* HEADER */
+nav ul{
+	margin: 0;
+	padding: 0;
+}
 .nav{
-	
+	background-color: #AA0011;
+}
+
+.active{
+	background-color: #fff;
+}
+
+.menu_button{
+
 }

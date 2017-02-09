@@ -2,18 +2,25 @@ from flask import Flask, render_template
 
 app = Flask("tibialoot")
 
-visits = 0
-
 @app.route("/")
 def home():
-	global visits
-	visits += 1
-	name = "Erik"
-	return render_template("home.html", username=name, visits=visits)
+	return render_template("home.html")
+
+@app.route("/loot_statistics/")
+def loot_statistics():
+	return render_template("loot_statistics.html")
+
+@app.route("/boss_statistics/")
+def boss_statistics():
+    return render_template("boss_statistics.html")
+
+@app.route("/online_check/")
+def onlinecheck():
+	return render_template("online_check.html")
 
 @app.route("/about/")
 def about():
 	return render_template("about.html")
 
 if __name__ == "__main__":
-	app.run(debug=True)
+	app.run("0.0.0.0", debug=True)

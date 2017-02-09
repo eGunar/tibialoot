@@ -1,1 +1,1 @@
-web: python tibialoot.py
+web: python3 tibialoot.py

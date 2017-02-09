@@ -14,11 +14,11 @@
 	<header>
 		<nav class="nav">
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/loot_statistics/">Loot Statistics</a></li>
-				<li><a href="/boss_statistics/">Boss Statistics</a></li>
-				<li><a href="/online_check/">Online Check</a></li>
-				<li><a href="/about/">About</a></li>
+				<li {% if request.path == '/' %} class="active" {% endif %} ><a class="" ass="menu_button" href="/">Home</a></li>
+				<li {% if request.path == '/loot_statistics/' %} class="active" {% endif %} ><a class="menu_button" href="/loot_statistics/">Loot Statistics</a></li>
+				<li {% if request.path == '/boss_statistics/' %} class="active" {% endif %} ><a class="menu_button" href="/boss_statistics/">Boss Statistics</a></li>
+				<li {% if request.path == '/online_check/' %} class="active" {% endif %} ><a class="menu_button" href="/online_check/">Online Check</a></li>
+				<li {% if request.path == '/about/' %} class="active" {% endif %} ><a class="menu_button" href="/about/">About</a></li>
 			</ul>
 		</nav>
 	</header>
