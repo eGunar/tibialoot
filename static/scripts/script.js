@@ -11,3 +11,16 @@ document.getElementById("hamburger").onclick = function(){
 		change_class("navbar", "inactive")
 	}
 }
+
+screensize = $(window).width();
+if (screensize >= 1000){
+	change_class("navbar", "nav")
+}
+
+$(window).resize(function () {
+	screensize = $(window).width();
+	if (screensize >= 1000){
+		change_class("navbar", "nav")
+	}
+});
+
