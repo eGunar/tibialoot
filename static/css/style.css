@@ -4,7 +4,6 @@ body{
 	margin: 0;
 	padding: 0;
 }
-<<<<<<< HEAD
 a{
 	text-decoration: none;
 }
@@ -89,22 +88,3 @@ a{
 	}
 	}
 }
-=======
-
-/* HEADER */
-nav ul{
-	margin: 0;
-	padding: 0;
-}
-.nav{
-	background-color: #AA0011;
-}
-
-.active{
-	background-color: #fff;
-}
-
-.menu_button{
-
-}
->>>>>>> f02b39a172edb742f9272cc74964abc0fd755b13

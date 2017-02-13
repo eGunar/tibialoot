@@ -11,7 +11,6 @@
 		<h1>Ooops! It looks like you've turned off JavaScript. Please turn on JavaScript in order to use this site properly</h1>
 	</noscript>
 	<!--[if IE]><h1>Dear Internet Explorer user. This website will not work as intended using IE. Please consider upgrading your web-browser to something better. </h1><![endif]-->
-<<<<<<< HEAD
 	<header class="header">
 		<img class="logo" alt="logo" src="{{ url_for('static', filename='images/logo.png') }}">
 		<img id="hamburger" alt="menu button" src="{{ url_for('static', filename='images/hamburger.png')}}" class="hamburger">
@@ -22,25 +21,12 @@
 				<li><a {% if request.path == '/boss_statistics/' %} class="active" {% endif %} href="/boss_statistics/"><p>Boss Statistics</p></a></li>
 				<li><a {% if request.path == '/online_check/' %} class="active" {% endif %} href="/online_check/"><p>Online Check</p></a></li>
 				<li><a {% if request.path == '/about/' %} class="active" {% endif %} href="/about/"><p>About</p></a></li>
-=======
-	<header>
-		<nav class="nav">
-			<ul>
-				<li {% if request.path == '/' %} class="active" {% endif %} ><a class="" ass="menu_button" href="/">Home</a></li>
-				<li {% if request.path == '/loot_statistics/' %} class="active" {% endif %} ><a class="menu_button" href="/loot_statistics/">Loot Statistics</a></li>
-				<li {% if request.path == '/boss_statistics/' %} class="active" {% endif %} ><a class="menu_button" href="/boss_statistics/">Boss Statistics</a></li>
-				<li {% if request.path == '/online_check/' %} class="active" {% endif %} ><a class="menu_button" href="/online_check/">Online Check</a></li>
-				<li {% if request.path == '/about/' %} class="active" {% endif %} ><a class="menu_button" href="/about/">About</a></li>
->>>>>>> f02b39a172edb742f9272cc74964abc0fd755b13
 			</ul>
 		</nav>
 	</header>
 	<main>{% block content %}{% endblock %}</main>
 	<footer></footer>
-<<<<<<< HEAD
 	<script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
-=======
->>>>>>> f02b39a172edb742f9272cc74964abc0fd755b13
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
 </html>
