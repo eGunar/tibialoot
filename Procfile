@@ -1,1 +1,1 @@
-web: python3 tibialoot.py
+web: gunicorn tibialoot:app
