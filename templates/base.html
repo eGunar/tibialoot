@@ -6,6 +6,7 @@
 	<title>{% block title %}My webapp{% endblock %}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
 	<noscript>
@@ -26,7 +27,27 @@
 		</nav>
 	</header>
 	<main>{% block content %}{% endblock %}</main>
-	<footer></footer>
+	<footer class="footer">
+		<img alt="logo" src="{{ url_for('static', filename='images/logo_black.png') }}">
+		<div class="container">
+			<div class="footer_row">
+				<ul>
+					<li><a href=""><img alt="mail" src="{{ url_for('static', filename='images/cash.svg') }}"><p>Support Us</p></a></li>
+					<li><a href=""><img alt="mail" src="{{ url_for('static', filename='images/letter.svg') }}"><p>egunnar1999@gmail.com</p></a></li>
+					<li><a href="/about"><img alt="About us" src="{{ url_for('static', filename='images/info.svg') }}"><p>About us</p></a></li>
+				</ul>
+			</div>
+			<div class="sitemap">
+				<ul>
+					<li><a href="/"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Home</p></a></li>
+					<li><a href="/loot_statistics"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Loot Statistics</p></a></li>
+					<li><a href="/boss_statistics"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Boss Statistics</p></a></li>
+					<li><a href="/online_check"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Online Check</p></a></li>
+					<li><a href="/about"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>About</p></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 	<script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
 </body>
 </html>
