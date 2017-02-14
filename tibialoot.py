@@ -6,9 +6,9 @@ app = Flask("tibialoot")
 def home():
 	return render_template("home.html")
 
-@app.route("/loot_statistics/")
-def loot_statistics():
-	return render_template("loot_statistics.html")
+@app.route("/spawn_statistics/")
+def spawn_statistics():
+	return render_template("spawn_statistics.html")
 
 @app.route("/boss_statistics/")
 def boss_statistics():

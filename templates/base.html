@@ -19,7 +19,7 @@
 		<nav id="navbar" class="inactive">
 			<ul>
 				<li><a {% if request.path == '/' %} class="active" {% endif %} href="/"><p>Home</p></a></li>
-				<li><a {% if request.path == '/loot_statistics/' %} class="active" {% endif %} href="/loot_statistics/"><p>Loot Statistics</p></a></li>
+				<li><a {% if request.path == '/spawn_statistics/' %} class="active" {% endif %} href="/spawn_statistics/"><p>Loot Statistics</p></a></li>
 				<li><a {% if request.path == '/boss_statistics/' %} class="active" {% endif %} href="/boss_statistics/"><p>Boss Statistics</p></a></li>
 				<li><a {% if request.path == '/online_check/' %} class="active" {% endif %} href="/online_check/"><p>Online Check</p></a></li>
 				<li><a {% if request.path == '/about/' %} class="active" {% endif %} href="/about/"><p>About</p></a></li>
@@ -40,7 +40,7 @@
 			<div class="sitemap">
 				<ul>
 					<li><a href="/"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Home</p></a></li>
-					<li><a href="/loot_statistics"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Loot Statistics</p></a></li>
+					<li><a href="/spawn_statistics"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Loot Statistics</p></a></li>
 					<li><a href="/boss_statistics"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Boss Statistics</p></a></li>
 					<li><a href="/online_check"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>Online Check</p></a></li>
 					<li><a href="/about"><img alt="Navigation" src="{{ url_for('static', filename='images/arrow-next.svg') }}"><p>About</p></a></li>
