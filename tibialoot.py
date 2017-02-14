@@ -18,6 +18,10 @@ def boss_statistics():
 def onlinecheck():
 	return render_template("online_check.html")
 
+@app.route("/lootcounter/")
+def lootcounter():
+	return render_template("lootcounter.html")
+
 @app.route("/about/")
 def about():
 	return render_template("about.html")

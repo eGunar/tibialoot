@@ -75,10 +75,7 @@ a{
 	}
 }
 
-@media(min-width: 600px){
-	.header{
-
-	}
+@media(min-width: 658px){
 	.nav ul{
 		display:table;
 		table-layout: fixed;
@@ -137,7 +134,7 @@ a{
 	padding-left: 1rem;
 }
 
-@media(min-width: 600px){
+@media(min-width: 500px){
 	.container{
 		display:table;
 		table-layout: fixed;
