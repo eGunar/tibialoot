@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Lootcounter {% endblock %}
+
+{% block content %}
+	<form action="{{ url_for('lootcounter') }}" method="post">
+	<div>
+    	<textarea class="input_field" type="text" name="loot"></textarea>
+  	</div>
+  	<div>
+    	<button type="submit">Submit</button>
+ 	</div>
+	</form>
+	<div class="loot_information_container">
+		<img src="{{ url_for('static', filename='images/button_active.png') }}">
+		<div class="display_value">
+		<h2>Loot information: </h2>
+		<ul>
+	    	<li><img alt="Alear" src="{{ url_for('static', filename='images/NPCs/Alesar.gif') }}"><p>{{ alesar }}</p></li>
+	    	<li><img alt="Rashid" src="{{ url_for('static', filename='images/NPCs/Rashid.gif') }}"><p>{{ rashid }}</p></li>
+	    	<li><img alt="Nah'bob" src="{{ url_for('static', filename='images/NPCs/Nahbob.gif') }}"><p>{{ nahbob }}</p></li>
+	    	<li><img alt="Tesha" src="{{ url_for('static', filename='images/NPCs/Tesha.gif') }}"><p>{{ tesha }}</p></li>
+	    	<li><img alt="Haroun" src="{{ url_for('static', filename='images/NPCs/Haroun.gif') }}"><p>{{ haroun }}</p></li>
+	    	<li><img alt="Yaman" src="{{ url_for('static', filename='images/NPCs/Yaman.gif') }}"><p>{{ yaman }}</p></li>
+	    	<li><img alt="Yasir" src="{{ url_for('static', filename='images/NPCs/Yasir.gif') }}"><p>{{ yasir }}</p></li>
+	    	<li><img alt="Lailene" src="{{ url_for('static', filename='images/NPCs/Lailene.gif') }}"><p>{{ lailene }}</p></li>
+	    	<li><img alt="Telas" src="{{ url_for('static', filename='images/NPCs/Telas.gif') }}"><p>{{ telas }}</p></li>
+	    	<li><img alt="Tamoril" src="{{ url_for('static', filename='images/NPCs/Tamoril.gif') }}"><p>{{ tamoril }}</p></li>
+	    	<li><img alt="Alexander" src="{{ url_for('static', filename='images/NPCs/Alexander.gif') }}"><p>{{ alexander }}</p></li>
+	    	<li><img alt="Esrik" src="{{ url_for('static', filename='images/NPCs/Esrik.gif') }}"><p>{{ esrik }}</p></li>
+	    	<li><img alt="The Bone Master" src="{{ url_for('static', filename='images/NPCs/The_Bone_Master.gif') }}"><p>{{ bone_master }}</p></li>
+	    	<li><img class="player" alt="Players" src="{{ url_for('static', filename='images/NPCs/Players.gif') }}"><p>{{ player_items }}</p></li>
+	    	<li><img alt="Gold" src="{{ url_for('static', filename='images/NPCs/Gold_Coin.gif') }}"><p>{{ gold }}</p></li>
+	    	<li><p><strong>Total Gold: {{ total }} </strong></p></li>
+		</ul>
+		</div>
+	<div class="display_loot">
+		
+	</div>
+	</div>
+{% endblock %}
