@@ -157,26 +157,31 @@ a{
 /* -------------------LOOTCOUNTER------------------ */
 .input_field{
 	display: block;
-	width: 100%;
+	border-radius: 10px;
+	max-width: 97%;
+	width: 97%;
 	padding-bottom: 5rem;
+}
+.submit{
+	float: right;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-color: #ffc260;
+	margin-top: 0.3rem;
+	margin-right: 0.3rem;
 }
 
 .loot_information_container{
+	margin: 1rem 0;
+
+}
+
+.display_value{
 	border: 1px solid black;
 	border-radius: 10px;
-	margin: 1rem 0;
+	background-color: white;	
+	padding-left: 0.3rem;
+	padding-right: 0.3rem;
 }
 
-.loot_information_container p{
-
-}
-
-.player{
-	width: 80px;
-	height: 100px;
-}
-
-.display_value ul li{
-	display: inline-block;
-}
 

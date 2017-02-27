@@ -7,14 +7,12 @@
 	<div>
     	<textarea class="input_field" type="text" name="loot"></textarea>
   	</div>
-  	<div>
+  	<div class="submit">
     	<button type="submit">Submit</button>
  	</div>
 	</form>
 	<div class="loot_information_container">
-		<img class="active_button" alt="active button" src="{{ url_for('static', filename='images/button_active.png') }}">
-		<div class="display_value">
-		<table>
+		<table class="display_value">
 			<tr>
 				<th>NPC</th>
 				<th>VALUE</th>
@@ -26,7 +24,7 @@
 					<img alt="{{ information[npc_value][0] }}" src="{{ url_for('static', filename='images/NPCs/' + information[npc_value][0] + '.gif') }}">
 				</td>
 				<td>
-					<p>{{ information[npc_value][1] }}</p>
+					<p>{{ information[npc_value][1]}}</p>
 				</td>
 			</tr>
 		{% endif %}
@@ -38,9 +36,5 @@
 				<td><p>{{ total }}</p></td>
 			</tr>
 		</table>
-		</div>
-	<div class="display_loot">
-		
-	</div>
 	</div>
 {% endblock %}
