@@ -38,7 +38,6 @@ def arrange_list(loot_info):
 				break
 
 		loot = [loot[x:x+2] for x in range(0, len(loot), 2)]
-		print(loot)
 		return loot
 	except IndexError:
 		return "error"
@@ -59,7 +58,7 @@ def count_loot(npc, lista):
 						loot_value += int(i.price)
 				except IndexError:
 					loot_value += int(i.price)
-	return loot_value
+	return [str(npc.__name__),loot_value]
 
 def run(serverlog):
 	loot_list = arrange_list(serverlog)

@@ -3,8 +3,8 @@
 {% block title %} Lootcounter {% endblock %}
 
 {% block content %}
-	<form action="{{ url_for('lootcounter') }}" method="post">
 	<div class="lootcounter_field">
+	<form action="{{ url_for('lootcounter') }}" method="post">	
     	<textarea class="input_field" type="text" name="loot" placeholder="Paste your serverlog here..."></textarea>
   	</div>
   	<div>

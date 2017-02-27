@@ -24,10 +24,11 @@ def lootcounter():
 		serverlog = request.form['loot'].split("\n")
 		import lootcounter
 		information = lootcounter.run(serverlog)
+		print(information)
 		total_loot = 0
 		for items in information:
-			total_loot += items
-		return render_template("counted_loot.html", alesar=information[0], rashid=information[1], nahbob=information[2], tesha=information[3], haroun=information[4], yaman=information[5], yasir=information[6], lailene=information[7], telas=information[8], tamoril=information[9], alexander=information[10], esrik=information[11], bone_master=information[12], player_items=information[13], gold=information[14], total=total_loot)
+			total_loot += items[1]
+		return render_template("counted_loot.html", information=information, total=total_loot)
 	else:	
 		return render_template("lootcounter.html")
 

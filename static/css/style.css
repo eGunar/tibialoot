@@ -167,6 +167,10 @@ a{
 	margin: 1rem 0;
 }
 
+.loot_information_container p{
+
+}
+
 .player{
 	width: 80px;
 	height: 100px;
@@ -175,3 +179,4 @@ a{
 .display_value ul li{
 	display: inline-block;
 }
+
