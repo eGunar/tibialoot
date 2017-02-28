@@ -14,7 +14,7 @@
 	</noscript>
 	<!--[if IE]><h1>Dear Internet Explorer user. This website will not work as intended using IE. Please consider upgrading your web-browser to something better. </h1><![endif]-->
 	<header class="header">
-		<a alt="home" href="/"><img class="logo" alt="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
+		<a href="/"><img class="logo" alt="logo" src="{{ url_for('static', filename='images/logo.png') }}"></a>
 		<img id="hamburger" alt="menu button" src="{{ url_for('static', filename='images/hamburger.png')}}" class="hamburger">
 		<nav id="navbar" class="inactive">
 			<ul>
@@ -28,7 +28,7 @@
 	</header>
 	<main>{% block content %}{% endblock %}</main>
 	<footer class="footer">
-		<a alt="home" href="/"><img alt="logo" src="{{ url_for('static', filename='images/logo_black.png') }}"></a>
+		<a href="/"><img alt="logo" src="{{ url_for('static', filename='images/logo_black.png') }}"></a>
 		<div class="container">
 			<div class="footer_row">
 				<ul>

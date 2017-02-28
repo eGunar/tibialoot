@@ -21,14 +21,14 @@ def onlinecheck():
 @app.route("/lootcounter/", methods=["GET", "POST"])
 def lootcounter():
 	if request.method == "POST":
+		huntname = request.form['huntinglocation']
 		serverlog = request.form['loot'].split("\n")
 		import lootcounter
 		information = lootcounter.run(serverlog)
-		print(information)
 		total_loot = 0
 		for items in information:
 			total_loot += items[1]
-		return render_template("counted_loot.html", information=information, total=total_loot)
+		return render_template("counted_loot.html", information=information, total=total_loot, huntname=huntname)
 	else:	
 		return render_template("lootcounter.html")
 

@@ -757,11 +757,12 @@ esrik = {"drachaku":10000,
           "zaoan legs":14000,
           "zaoan shoes":5000,
           "zaoan sword":30000}
+player_items = {"ultimate health potion":250,
+                "great mana potion":80}
 
 
-
-npc_list = [rashid, nahbob, haroun, alesar, yaman, yasir, lailene, telas, tesha, tamoril, alexander, esrik, bone_master, gold]
-database_list = [Rashid, Nahbob, Haroun, Alesar, Yaman, Yasir, Lailene, Telas, Tesha, Tamoril, Alexander, Esrik, Bone_master, Gold]
+npc_list = [rashid, nahbob, haroun, alesar, yaman, yasir, lailene, telas, tesha, tamoril, alexander, esrik, bone_master, gold, player_items]
+database_list = [Rashid, Nahbob, Haroun, Alesar, Yaman, Yasir, Lailene, Telas, Tesha, Tamoril, Alexander, Esrik, Bone_master, Gold, Player_items]
 
 for i in range(len(npc_list)):
 	for item, value in npc_list[i].items():

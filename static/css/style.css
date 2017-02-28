@@ -103,6 +103,7 @@ a{
 	padding-bottom: 2rem;
 	font-family: "Raleway", sans-serif;
 	font-weight: bold;
+	clear: both;
 }
 .footer_row{
 
@@ -161,25 +162,54 @@ a{
 	max-width: 97%;
 	width: 97%;
 	padding-bottom: 5rem;
+	padding-left: 4px;
+}
+
+.serverlog_submit_container{
+	width: 40%;
+	display: inline-block;
+	margin-left: 0.8rem;
+	margin-top: 1rem;
+}
+.hunt_name{
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 0.3rem;
+	padding-left: 4px;
+}
+
+button{
+	background-color: #ffc260;
+	border-radius: 10px;
+	border: 1px solid black;
 }
 .submit{
 	float: right;
-	border: 1px solid black;
-	border-radius: 10px;
-	background-color: #ffc260;
 	margin-top: 0.3rem;
 	margin-right: 0.3rem;
+	margin-bottom: 0.3rem;
 }
+
 
 .loot_information_container{
 	margin: 1rem 0;
-
-}
-
-.display_value{
+	display: inline-block;
+	margin-left: 0.2rem;
+	float: left;
+	min-width: 40%;
 	border: 1px solid black;
 	border-radius: 10px;
 	background-color: white;	
+
+}
+.loot_information_container h4{
+	margin: 0.3rem 1rem;
+}
+.npc_image{
+	max-width: 70px;
+}
+
+.display_value{
 	padding-left: 0.3rem;
 	padding-right: 0.3rem;
 }
