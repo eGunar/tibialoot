@@ -3,7 +3,6 @@ from models import *
 import re
 
 
-
 def remove_text_within_brackets(string):
     ret = ''
     skip1c = 0

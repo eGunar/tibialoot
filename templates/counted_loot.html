@@ -15,6 +15,37 @@
 	    	<button type="submit">Submit</button>
 	 	</div>
 		</form>
+		<div class="toggle_button">
+			<a id="custom_prices">Price Settings</a>
+		</div>
+		<div class="custom_items pop">
+		<ul>
+			{% for npc in npc_list %}
+				<li class="button_list">
+				<div class="npc_button">
+					<a id="{{npc.__name__}}">{{npc.__name__.replace('_', ' ')}}</a>
+				</div>
+				</li>
+				<li id="{{npc.__name__ + 'list'}}" class="inactive">
+				<div class="npc_items">
+				<h4>{{npc.__name__.title().replace('_', ' ')}}</h4>
+				<table>
+				{% for item in npc %}
+					<tr>
+					<td>
+						<img alt="{{item.item_name}}" src="{{ url_for('static', filename='images/items/' + item.item_name.title().replace(' ', '_') + '.gif') }}">
+					</td>
+					<td>
+						<p>{{item.price}}</p>
+					</td>
+					</tr>
+				{% endfor %}
+				</table>
+				</div>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
 	</div>
 	<div class="loot_information_container">
 		{% if huntname %}

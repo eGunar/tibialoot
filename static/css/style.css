@@ -182,12 +182,14 @@ button{
 	background-color: #ffc260;
 	border-radius: 10px;
 	border: 1px solid black;
+	cursor: pointer;
 }
 .submit{
 	float: right;
 	margin-top: 0.3rem;
 	margin-right: 0.3rem;
 	margin-bottom: 0.3rem;
+	margin-left: 0.5rem;
 }
 
 
@@ -214,4 +216,71 @@ button{
 	padding-right: 0.3rem;
 }
 
+.toggle_button{
+	float: right;
+	text-decoration: none;
+	color: black;
+	background-color: #ffc260;
+	border-radius: 10px;
+	border: 1px solid black;
+	margin-top: 0.3rem;
+	margin-bottom: 0.3rem;
+	cursor: pointer;
+}
+.toggle_button a{
+	color: black;
+	padding: 2px 6px 3px;
+	font: 11px Arial;
+}
+.toggle_button a.pressed {
+	color:white;
+}
 
+.custom_items {
+	clear: both;
+	background-color:#FFFFFF;
+	border:1px solid black;
+	border-radius: 10px;
+	cursor:default;
+	display:none;
+	margin-top: 1rem;
+	text-align:left;
+	width: 97%;
+	padding-left: 4px;
+	z-index:50;
+	margin-bottom: 1rem;
+}
+.custom_items .button_list{
+	display: block;
+}
+
+.custom_items ul{
+	padding: 0;
+	margin: 0;
+}
+
+.button_list:first-child{
+	margin-top: 0.3rem;
+}
+
+.npc_button{
+	display: inline-block;
+	background-color: #ffc260;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 0.3rem;
+	cursor: pointer;
+}
+.npc_button a{
+	text-decoration: none;
+	color: black;
+	padding: 2px 6px 3px;
+	font: 11px Arial;
+}
+.npc_button a.pressed{
+	color: #FFF;
+}
+
+.show{
+	display: block;
+}

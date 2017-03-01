@@ -15,5 +15,13 @@
 	    	<button type="submit">Submit</button>
 	 	</div>
 		</form>
+		<div class="toggle_button">
+			<a id="custom_prices">Price Settings</a>
+		</div>
+		<div class="custom_items pop">
+			{% for item in npc_list %}
+				{{item.__classname__}}
+			{% endfor %}
+		</div>
 	</div>
 {% endblock %}

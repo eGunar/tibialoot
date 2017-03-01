@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request	
+from flask import Flask, render_template, request
+from models import *	
 
 app = Flask("tibialoot")
 
@@ -21,6 +22,7 @@ def onlinecheck():
 @app.route("/lootcounter/", methods=["GET", "POST"])
 def lootcounter():
 	if request.method == "POST":
+		npc_list = [Alesar, Rashid, Nahbob, Tesha, Haroun, Yaman, Yasir, Lailene, Telas, Tamoril, Alexander, Esrik, Bone_master, Player_items, Gold]
 		huntname = request.form['huntinglocation']
 		serverlog = request.form['loot'].split("\n")
 		import lootcounter
@@ -28,9 +30,11 @@ def lootcounter():
 		total_loot = 0
 		for items in information:
 			total_loot += items[1]
-		return render_template("counted_loot.html", information=information, total=total_loot, huntname=huntname)
-	else:	
-		return render_template("lootcounter.html")
+		print(npc_list)
+		return render_template("counted_loot.html", information=information, total=total_loot, huntname=huntname, npc_list=npc_list)
+	else:
+		npc_list = [Alesar, Rashid, Nahbob, Tesha, Haroun, Yaman, Yasir, Lailene, Telas, Tamoril, Alexander, Esrik, Bone_master, Player_items, Gold]
+		return render_template("lootcounter.html", npc_list=npc_list)
 
 @app.route("/about/")
 def about():
