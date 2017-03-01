@@ -22,6 +22,46 @@ var togglebutton = function(id, desired_class){
 	}
 }
 
+screensize = $(window).width();
+if (screensize >= 1000){
+	change_class("navbar", "nav")
+}
+
+$(window).resize(function () {
+	screensize = $(window).width();
+	if (screensize >= 1000){
+		change_class("navbar", "nav")
+	}
+});
+
+
+function deselect(e) {
+  $('.pop').slideFadeToggle(function() {
+    e.removeClass('pressed');
+  });    
+}
+
+$(function() {
+  $('#custom_prices').on('click', function() {
+    if($(this).hasClass('pressed')) {
+      deselect($(this));               
+    } else {
+      $(this).addClass('pressed');
+      $('.pop').slideFadeToggle();
+    }
+    return false;
+  });
+
+  $('.close').on('click', function() {
+    deselect($('#custom_prices'));
+    return false;
+  });
+});
+
+$.fn.slideFadeToggle = function(easing, callback) {
+  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
+};
+
 document.getElementById('Alesar').onclick = function(){
 	togglebutton('Alesarlist', 'show')
 }
@@ -67,43 +107,3 @@ document.getElementById('Player_items').onclick = function(){
 document.getElementById('Gold').onclick = function(){
 	togglebutton('Goldlist', 'show')
 }
-
-screensize = $(window).width();
-if (screensize >= 1000){
-	change_class("navbar", "nav")
-}
-
-$(window).resize(function () {
-	screensize = $(window).width();
-	if (screensize >= 1000){
-		change_class("navbar", "nav")
-	}
-});
-
-
-function deselect(e) {
-  $('.pop').slideFadeToggle(function() {
-    e.removeClass('pressed');
-  });    
-}
-
-$(function() {
-  $('#custom_prices').on('click', function() {
-    if($(this).hasClass('pressed')) {
-      deselect($(this));               
-    } else {
-      $(this).addClass('pressed');
-      $('.pop').slideFadeToggle();
-    }
-    return false;
-  });
-
-  $('.close').on('click', function() {
-    deselect($('#custom_prices'));
-    return false;
-  });
-});
-
-$.fn.slideFadeToggle = function(easing, callback) {
-  return this.animate({ opacity: 'toggle', height: 'toggle' }, 'fast', easing, callback);
-};
