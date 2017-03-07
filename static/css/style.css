@@ -74,8 +74,15 @@ a{
 		display: none;
 	}
 }
-
+@media(min-width: 834px){
+	.nav{
+		padding-left: 20%;
+	}
+}
 @media(min-width: 658px){
+	.logo{
+		padding-left: 40%;
+	}
 	.nav ul{
 		display:table;
 		table-layout: fixed;
@@ -283,4 +290,29 @@ button{
 
 .show{
 	display: block;
+}
+
+
+.contact_box{
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	width: 30%;
+}
+
+.contact_box input, textarea{
+	margin-bottom: 0.3rem;
+	padding-left: 0;
+	padding-right: 0;	
+	width: 100%;
+	max-width: 100%;
+	display: block;
+	border: 1px solid #bdbfc1;
+}
+
+.contact_box textarea{
+	height: 6rem;
+}
+
+.contact_box button{
+	float: right;
 }

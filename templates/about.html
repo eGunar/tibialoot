@@ -3,5 +3,19 @@
 {% block title %} About {% endblock %}
 
 {% block content %}
+<div class="contact_box">
+	<form method="POST">
+		<div>
+		<input type="text" name="name" placeholder="Name">
+		</div>
+		<div>
+		<input type="email" name="email" placeholder="Email" required>
+		</div>
+		<div>
+		<textarea required></textarea>
+		</div>
+		<button type="submit">Send</button>
+	</form>
+</div>
 
 {% endblock %}
