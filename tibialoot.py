@@ -30,7 +30,6 @@ def lootcounter():
 		total_loot = 0
 		for items in information:
 			total_loot += items[1]
-		print(npc_list)
 		return render_template("counted_loot.html", information=information, total=total_loot, huntname=huntname, npc_list=npc_list)
 	else:
 		npc_list = [Alesar, Rashid, Nahbob, Tesha, Haroun, Yaman, Yasir, Lailene, Telas, Tamoril, Alexander, Esrik, Bone_master, Player_items, Gold]
