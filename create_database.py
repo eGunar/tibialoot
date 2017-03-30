@@ -5,7 +5,6 @@ from models import *
 
 
 db.connect()
-db.create_tables([Rashid, Nahbob, Haroun, Alesar, Yaman, Yasir, Lailene, Telas, Tesha, Tamoril, Alexander, Esrik, Bone_master, Player_items, Gold])
 
 rashid = {"abyss hammer":20000,
         "albino plate":1500,
@@ -757,6 +756,7 @@ esrik = {"drachaku":10000,
           "zaoan legs":14000,
           "zaoan shoes":5000,
           "zaoan sword":30000}
+
 player_items = {"ultimate health potion":250,
                 "great mana potion":80}
 

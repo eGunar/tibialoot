@@ -1,7 +1,7 @@
 from peewee import *
 
-db = SqliteDatabase("npcs.db")
-
+DATABASE = "tibialoot"
+db = PostgresqlDatabase(DATABASE)
 
 class Rashid(Model):
 	item_name = CharField()

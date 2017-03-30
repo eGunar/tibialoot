@@ -2,3 +2,4 @@ Flask
 gunicorn
 peewee
 Flask-WTF
+psycopg2

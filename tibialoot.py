@@ -2,10 +2,19 @@ from flask import Flask, render_template, request
 from models import *	
 from forms import *
 
+
 app = Flask("tibialoot")
 app.config["WTF_CSRF_ENABLED"] = False 
 
 
+@app.before_request
+def before_request():
+    db.connect()
+
+@app.after_request
+def after_request(response):
+    db.close()
+    return response
 @app.route("/")
 def home():
 	return render_template("home.html")
