@@ -1,7 +1,13 @@
-from peewee import *
+from peewee import PostgresqlDatabase, Model, CharField
+from playhouse.db_url import connect
+import os
 
-DATABASE = "tibialoot"
-db = PostgresqlDatabase(DATABASE)
+DATABASE_URL = os.environ.get("DATABASE_URL")
+if DATABASE_URL:
+	db = connect(DATABASE_URL)
+else:
+	DATABASE = "tibialoot"
+	db = PostgresqlDatabase(DATABASE)
 
 class Rashid(Model):
 	item_name = CharField()

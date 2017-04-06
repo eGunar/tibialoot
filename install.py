@@ -1,5 +1,5 @@
-from peewee import PostgresqlDatabase, Model, CharField
 from models import *
+
 
 
 db.connect()
