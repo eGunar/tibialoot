@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %} SECRET RECIPIE {% endblock %}
+
+{% block content %}
+	{% if not visited %}
+		<p>HEJ NEWBIE</p>
+	{% else %}
+		<p>VÄLKOMMEN TILLBAKA FÖR {{visits}}</p>
+	{% endif %}
+
+<div class="contact_box">
+	<form method="POST">
+		<div>
+			{{login_form.password}}
+		</div>
+		<button type="submit">Send</button>
+	</form>
+</div>
+
+{% endblock %}
+
+
