@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, make_response, session, redirect, url_for
-from models import *	
+from flask_security import Security, PeeweeUserDatastore, login_required	
+from models import *
 from forms import *
 import os
 
@@ -7,14 +8,14 @@ app = Flask("tibialoot")
 app.config["WTF_CSRF_ENABLED"] = False 
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "insecure dev key")
 
-@app.before_request
-def before_request():
-    db.connect()
 
-@app.after_request
-def after_request(response):
-    db.close()
-    return response
+app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"] = "email"
+app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
+app.config["SECURITY_PASSWORD_SALT"] = app.config["SECRET_KEY"]
+
+user_datastore = PeeweeUserDatastore(db, User, Role, UserRoles)
+security = Security(app, user_datastore)
+
 
 """
 @app.route("/recipie/")
@@ -53,6 +54,7 @@ def onlinecheck():
 	return render_template("online_check.html")
 
 @app.route("/lootcounter/", methods=["GET", "POST"])
+@login_required
 def lootcounter():
 	if request.method == "POST":
 		npc_list = [Alesar, Rashid, Nahbob, Tesha, Haroun, Yaman, Yasir, Lailene, Telas, Tamoril, Alexander, Esrik, Bone_master, Player_items, Gold]
@@ -76,6 +78,8 @@ def about():
 	else:
 		return render_template("about.html", contact_form=contact_form)
 
+
+"""
 @app.route("/login/", methods=["GET", "POST"])
 def log_in():
 	login_form = LoginForm()
@@ -96,5 +100,6 @@ def recipie():
 		return "HEJASNA"
 	else:
 		return "Access Denied"
+"""
 if __name__ == "__main__":
 	app.run("0.0.0.0", debug=True)

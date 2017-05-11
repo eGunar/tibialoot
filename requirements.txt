@@ -3,3 +3,4 @@ gunicorn
 peewee
 Flask-WTF
 psycopg2
+flask-security

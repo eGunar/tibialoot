@@ -6,10 +6,10 @@
 <div class="contact_box">
 	<form method="POST">
 		<div>
-		<input type="text" name="name" placeholder="Name">
+			{{contact_form.name}}
 		</div>
 		<div>
-		<input type="email" name="email" placeholder="Email" required>
+			{{contact_form.email}}
 		</div>
 		<div>
 		<textarea required></textarea>
@@ -17,9 +17,5 @@
 		<button type="submit">Send</button>
 	</form>
 </div>
-{{contact_form.name}}
-{{contact_form.email}}
-
-
 
 {% endblock %}

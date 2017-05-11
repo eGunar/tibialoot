@@ -8,3 +8,6 @@ class ContactForm(FlaskForm):
 
 class LoginForm(FlaskForm):
 	password = PasswordField("password", [validators.InputRequired()])
+
+
+

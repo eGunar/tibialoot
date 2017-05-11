@@ -1,6 +1,8 @@
-from peewee import PostgresqlDatabase, Model, CharField
+from peewee import PostgresqlDatabase, Model, CharField, BooleanField, ForeignKeyField
+from flask_security import UserMixin, RoleMixin
 from playhouse.db_url import connect
 import os
+
 
 DATABASE_URL = os.environ.get("DATABASE_URL")
 if DATABASE_URL:
@@ -112,6 +114,31 @@ class Player_items(Model):
 class Gold(Model):
 	item_name = CharField()
 	price = CharField()
+
+	class Meta:
+		database = db
+
+
+class User(Model, UserMixin):
+	email = CharField(unique=True)
+	password = CharField()
+	active = BooleanField(default=True)
+
+	class Meta:
+		database = db
+
+class Role(Model, RoleMixin):
+	name = CharField(unique=True)
+	description = CharField(null=True)
+
+	class Meta:
+		database = db
+
+class UserRoles(Model):
+	user = ForeignKeyField(User, related_name="roles")
+	role = ForeignKeyField(User, related_name="users")
+	name = property(lambda self: self.role.name)
+	description = property(lambda self: self.role.description)
 
 	class Meta:
 		database = db
