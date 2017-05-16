@@ -1,8 +1,7 @@
 from peewee import PostgresqlDatabase, Model, CharField, BooleanField, ForeignKeyField
 from flask_security import UserMixin, RoleMixin
 from playhouse.db_url import connect
-from database import *
-
+from database import db
 
 class Rashid(Model):
 	item_name = CharField()
