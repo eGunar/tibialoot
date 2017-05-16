@@ -1,5 +1,5 @@
 from peewee import *
-from database import db
+import database
 
 
 

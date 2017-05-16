@@ -1,4 +1,4 @@
-from database import db
+import database
 
 db.connect()
 db.create_tables([
