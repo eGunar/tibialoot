@@ -1,6 +1,6 @@
 from peewee import *
-from database import *
-
+from database import db
+from models import *
 
 
 

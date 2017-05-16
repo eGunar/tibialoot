@@ -1,4 +1,5 @@
-from database import *
+from database import db
+from models import *
 
 db.connect()
 db.create_tables([
