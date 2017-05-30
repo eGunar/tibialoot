@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+<div class="contact_box">
+	<form action="{{ url_for_security('register')}}" method="POST">
+		<h3>Register</h3>
+		<div>
+			{{register_user_form.email(placeholder="Email")}}
+		</div>
+		<div>
+			{{register_user_form.password(placeholder="Password")}}
+		</div>
+		<div>
+			<button type="submit">Send</button>
+		</div>
+		<a href="/lootcounter">Already have an account? Login now!</a>
+	</form>
+</div>
+
+{% endblock %}

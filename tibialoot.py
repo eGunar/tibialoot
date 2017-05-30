@@ -1,16 +1,17 @@
 from flask import Flask, render_template, request, make_response, session, redirect, url_for
-from flask_security import Security, PeeweeUserDatastore, login_required	
+from flask_security import Security, PeeweeUserDatastore, login_required
 from models import *
 from forms import *
 import os
 
 app = Flask("tibialoot")
-app.config["WTF_CSRF_ENABLED"] = False 
+app.config["WTF_CSRF_ENABLED"] = True
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "insecure dev key")
 
 app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"] = "email"
 app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
 app.config["SECURITY_PASSWORD_SALT"] = app.config["SECRET_KEY"]
+app.config['SECURITY_REGISTERABLE'] = True
 
 user_datastore = PeeweeUserDatastore(db, User, Role, UserRoles)
 security = Security(app, user_datastore)
@@ -36,6 +37,7 @@ def boss_statistics():
     return render_template("boss_statistics.html")
 
 @app.route("/online_check/")
+@login_required
 def onlinecheck():
 	return render_template("online_check.html")
 

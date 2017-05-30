@@ -1,4 +1,4 @@
-from peewee import PostgresqlDatabase, Model, CharField, BooleanField, ForeignKeyField
+from peewee import Model, CharField, BooleanField, ForeignKeyField
 from flask_security import UserMixin, RoleMixin
 from database import db
 
