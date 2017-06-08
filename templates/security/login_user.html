@@ -5,6 +5,7 @@
 {% block content %}
 <div class="contact_box">
 	<form action="" method="POST">
+	{{ login_user_form.csrf_token }}
 		<h3>Login</h3>
 		<div>
 			{{login_user_form.email(placeholder="Email")}}
@@ -14,6 +15,13 @@
 		</div>
 		<div>
 			<button type="submit">Send</button>
+		</div>
+		<div>
+			{% if login_user_form.errors %}
+				{% for error in login_user_form.errors %}
+				<small> Wrong {{error}} </small>
+				{% endfor %}
+			{% endif %}
 		</div>
 		<a href="/register">Don't have an account? Register now!</a>
 	</form>

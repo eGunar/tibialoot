@@ -12,6 +12,7 @@ app.config["SECURITY_USER_IDENTITY_ATTRIBUTES"] = "email"
 app.config["SECURITY_PASSWORD_HASH"] = "pbkdf2_sha512"
 app.config["SECURITY_PASSWORD_SALT"] = app.config["SECRET_KEY"]
 app.config['SECURITY_REGISTERABLE'] = True
+app.config["SECURITY_SEND_REGISTER_EMAIL"] = False
 
 user_datastore = PeeweeUserDatastore(db, User, Role, UserRoles)
 security = Security(app, user_datastore)
