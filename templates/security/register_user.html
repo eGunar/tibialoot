@@ -10,7 +10,7 @@
 {% endmacro %}
 <div class="contact_box">
 	<form action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
-	{{ login_user_form.csrf_token }}
+	{{ register_user_form.csrf_token }}
 	  {{ register_user_form.hidden_tag() }}
 	  {{ render_field_with_errors(register_user_form.email) }}
 	  {{ render_field_with_errors(register_user_form.password) }}
